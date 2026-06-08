@@ -1,0 +1,24 @@
+{
+&quot;name&quot;: &quot;PHP, MySQL, and phpMyAdmin Environment&quot;,
+&quot;dockerComposeFile&quot;: &quot;docker-compose.yml&quot;,
+&quot;service&quot;: &quot;web&quot;,
+&quot;workspaceFolder&quot;: &quot;/var/www/html&quot;,
+&quot;forwardPorts&quot;: [8080, 8081],
+&quot;postStartCommand&quot;: &quot;git config --global --add safe.directory
+${containerWorkspaceFolder}&quot;,
+&quot;features&quot;: {
+&quot;ghcr.io/devcontainers/features/common-utils:2&quot;: {
+&quot;installGit&quot;: true,
+&quot;username&quot;: &quot;vscode&quot;
+}
+},
+&quot;customizations&quot;: {
+&quot;vscode&quot;: {
+&quot;extensions&quot;: [
+&quot;bmewburn.vscode-intelephense-client&quot;,
+&quot;mtxr.sqltools&quot;,
+&quot;mtxr.sqltools-driver-mysql&quot;
+]
+}
+}
+}
