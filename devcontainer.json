@@ -1,0 +1,18 @@
+{
+    "name": "RUGBY GEAR",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "web",
+    "workspaceFolder": "/var/www/html",
+    "forwardPorts": [8080, 8081, 3306],
+    "portsAttributes": {
+        "8080": {
+            "label": "RUGBY GEAR (web)",
+            "onAutoForward": "openPreview",
+            "visibility": "public"
+        },
+        "8081": {
+            "label": "phpMyAdmin"
+        }
+    },
+    "postCreateCommand": "echo 'RUGBY GEAR is ready. Open the forwarded port 8080 to view it.'"
+}
