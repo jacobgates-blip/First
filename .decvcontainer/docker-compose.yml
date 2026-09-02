@@ -19,6 +19,8 @@ services:
       MYSQL_DATABASE: rugby_loans
     ports:
       - "3306:3306"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
